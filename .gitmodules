@@ -1,0 +1,3 @@
+[submodule "batavia"]
+	path = batavia
+	url = git@github.com:beeware/batavia.git
