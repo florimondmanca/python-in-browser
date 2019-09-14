@@ -16,5 +16,5 @@ templates = Jinja2Templates(directory="templates")
 
 @app.route("/")
 async def homepage(request: Request) -> Response:
-    context = {"request": request, "code": bytecode(os.path.join("frontend", "foo.py"))}
+    context = {"request": request, "code": bytecode(os.path.join("frontend", "app.py"))}
     return templates.TemplateResponse("index.html", context)
