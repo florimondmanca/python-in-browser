@@ -1,6 +1,6 @@
-# batavia-starlette
+# python-in-browser
 
-Run Python in the browser using [Batavia] and [Starlette].
+Running Python in the browser using [Batavia] and [Starlette].
 
 [batavia]: https://github.com/beeware/batavia
 [starlette]: https://www.starlette.io
