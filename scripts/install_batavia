@@ -1,0 +1,7 @@
+#! /bin/sh -e
+
+cd batavia
+npm install
+npm run build
+cd ..
+cp batavia/dist/batavia.js static/
