@@ -1,0 +1,15 @@
+# Runtime
+-e ../batavia
+
+# App
+starlette
+aiofiles
+jinja2
+
+# Server
+uvicorn
+
+# Tooling
+pylint
+black
+mypy

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Batavia + Starlette</title>
+
+    <!--Main styles for this site-->
+    <!-- <link rel="stylesheet" href="/static/styles/styles.css" /> -->
+
+    <!-- Batavia virtual machine -->
+    <script src="/static/batavia.js"></script>
+
+    <!-- Code from the server -->
+    <script
+      id="batavia-code"
+      type="application/python-bytecode"
+      data-filename="{{ code.filename }}"
+    >
+      {{ code.compiled }}
+    </script>
+
+    <script src="/static/stdouterr.js"></script>
+
+    <script>
+      function bootstrap() {
+        window.vm = new batavia.VirtualMachine({
+          stdout: new PyConsole(),
+          stderr: new PyErrConsole(),
+          frame: null
+        });
+        vm.run("code", []);
+      }
+    </script>
+  </head>
+
+  <body onload="bootstrap();">
+    <h1>Batavia + Starlette</h1>
+    <h2>Open your console!</h2>
+
+    <pre id="pyconsole"></pre>
+  </body>
+</html>
