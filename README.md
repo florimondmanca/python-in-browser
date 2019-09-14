@@ -5,6 +5,21 @@ Running Python in the browser using [Batavia] and [Starlette].
 [batavia]: https://github.com/beeware/batavia
 [starlette]: https://www.starlette.io
 
+## Demo
+
+```python
+# frontend/app.py
+import dom
+
+print("Hello from Python!")
+
+dom.document.title = "Hello world"
+div = dom.document.getElementById("pyconsole")
+div.innerHTML = div.innerHTML + "\n\nHello, World!\n\n"
+
+raise ValueError("Just testing out exceptions!")
+```
+
 ![](assets/screenshot.png)
 
 ## Installation
